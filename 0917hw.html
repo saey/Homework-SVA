@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FirstCode</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="The Chopping Block, Inc." />
+	<meta name="geo.country" content="US" />
+	<meta name="dc.language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8" />
+	
+	<style type="text/css" media="screen">		
+		/*local styles if any (quick tests and local only overrides)*/
+	</style>
+</head>
+<body>
+
+	<div class="wrap" >
+		Project: FirstCode
+		<ul>
+			<li>Display the prompt</li>
+			<li>Take the value from the prompt and display on the screen</li>
+            <br><br>
+            <div id="num_result"></div>
+		</ul>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		//var fname = prompt("Enter first name.");
+		//var lname = prompt("Enter last name.") ;
+		//document.getElementById("pname").innerHTML = fname + " " + lname;
+		
+		var u_number	= prompt("Enter 1 or 2 or 3");
+		var adj			= prompt("Enter adjective");
+		var num1		= "The weather is always " + adj + ".";
+		var num2		= "Be kind to your "+ adj + " feet.";
+		var num3		= "No more " +adj+" cats.";
+		
+		if(u_number == 1){
+			document.getElementById("num_result").innerHTML = num1;
+			}
+		else if(u_number ==2){
+			document.getElementById("num_result").innerHTML = num2;
+			}
+		else if(u_number ==3){
+			document.getElementById("num_result").innerHTML = num3;
+			}
+		else{
+			alert("Please enter 1 or 2 or 3");
+			}
+		
+		
+		
+		//Going to need to use
+		// prompt("Helper Text");
+		// Assign to a variable
+		// Display to the screen, using
+		// 		document.getElementById("paragraph").innerHTML = variable;
+		
+		
+	</script>
+	
+	
+</body>
+</html>
