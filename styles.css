@@ -1,0 +1,110 @@
+/* 
+ * styles.css
+ *
+ * @author: Chopping Block (choppinblock.com)
+ *
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Your styles go here */
+body{
+	background:#CCC;
+	color:#FFF;
+	font-size:12px;
+	letter-spacing:1px;
+	font-family: 'Marcellus', serif;
+	}
+
+.wrap{
+	width:90%;
+	margin:0 auto;
+	margin-top:30px;
+	overflow:hidden;
+	}
+.wrap div{
+	float:left;
+	overflow:hidden;
+		}
+.wrap div:first-child{
+	border:dotted 1px #fff;
+    margin:0 20px 0 0;
+	padding:10px;
+	width:15%;
+	min-width:150px;
+	font-size:10px;
+	overflow:hidden;
+	}
+.wrap div:last-child{
+	width:65%;
+	margin:60px 0 0 0;
+	overflow:hidden;
+	}
+
+h3{
+	font-weight:bold;
+	font-size:14px;
+	padding:5px 0 0 0;
+	letter-spacing:2px;
+	}
+ol{
+	margin:30px 0 0 0;
+	}
+li{
+	list-style:none;
+	margin-top:8px;
+	padding:0 0 2px 0;
+	border-bottom:dotted 1px #fff;
+	width:100%;
+	}
+input{ 
+	border-radius:14px;	
+	color:#3CC;
+	padding:3px;
+	}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slideshow_1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="The Chopping Block, Inc." />
+	<meta name="geo.country" content="US" />
+	<meta name="dc.language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8" />
+	
+	<style type="text/css" media="screen">		
+		/*local styles if any (quick tests and local only overrides)*/
+		.btn{
+			cursor:pointer;
+			}
+		.wrap{
+			padding:30px;
+			}
+	</style>
+</head>
+<body>
+
+	<div class="wrap" >
+		Project: Slideshow_1<br><br>
+		
+        <span id="prev" class="btn">Prev</span> | <span id="next" class="btn">Next</span><br><br>
+		<img id="image" src="http://placekitten.com/200/300"></img><br><br>
+		
+		
+	</div>
+	
+	<div>
+	When you click next, you need to show the next image in the array
+	Updated the img.src
+	In order to show the next one, you need to keep track of the current one
+	You need to check (use conditional) to see if you are at the end of the array
+	Check against the length property of the array (images.length)
+	Set the variable where you are keeping track of the index to 0
+	
+	To make a next button with an event listener that shows the next images in an array
+	
+	images
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		
+		
+		var images = [
+			 "http://placekitten.com/200/300",
+    		 "http://placekitten.com/200/400",			
+			 "http://placekitten.com/200/500",
+			 "http://placekitten.com/200/600",		
+		];
+		
+		var currentImage = 0;
+
+		function nextClicked(e){
+			
+			if(currentImage + 1 < images.length){
+				document.getElementById("image").src = images[currentImage + 1];
+			
+				currentImage = currentImage + 1;
+			}else{
+				
+				document.getElementById("image").src = images[0];
+			
+				currentImage = 0;
+			}
+			
+			
+		}
+		
+		function prevClicked(e){
+		
+			if(currentImage - 1 >= 0){
+				document.getElementById("image").src = images[currentImage - 1];
+				currentImage = currentImage - 1;
+			}else{
+				document.getElementById("image").src = images[3];
+				currentImage = 3;
+			}
+		
+		
+		}
+
+		// var next_button = document.getElementById("next");
+		var next_button = document.querySelector("#next");	
+		var prev_button = document.querySelector("#prev");	
+		//Add an event listener to the next button for the click event and point it at an empty function
+		
+		next_button.addEventListener("click", nextClicked, false);
+		prev_button.addEventListener("click", prevClicked, false);	
+</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Hw for week 2</title>
+
+</head>
+
+<body>
+<div id="paper"><img src="http://place-hold.it/150x150/333/fff&text=P"  /></div>　<img src="http://place-hold.it/150x150/333/fff&text=R" id="rock">　<img src="http://place-hold.it/150x150/333/fff&text=S" id="scissors">
+</div><br><br>
+
+<div id="cfield"></div>
+
+<script type="text/javascript">
+		var paper		= document.getElementById("paper");
+		var rock		= document.getElementById("rock");
+		var scissors	= document.getElementById("scissors");
+		
+		paper.onclick 		= prs("paper");
+		rock.onclick		= prs("rock");
+		scissors.onclick	= prs("scissors");
+
+		
+		function prs(e){
+			var mx	= 3;
+			var mn	= 1;
+			var r 	= Math.round(Math.random()*(mx-mn))+mn;
+			if (r==1){
+				var com = "paper";
+				show(paper.alt);
+				}
+			else if (r==2){
+				var com = "rock";
+				show(rock.alt);
+				}
+			else{
+				var com = "scissors";
+				show(scissors);
+				}
+				
+			if(e == com){
+				console.log("No one won.")
+				}
+			else if( (e == paper && com == rock)||(e == rock && com == scissors)||(e == scissors && com == paper) ){
+				console.log("User won.")
+				}
+			else if ((e == paper && com == scissors)||(e == rock && com == paper)||(e == scissors && com == rock)){
+				console.log("User lost.")
+				}
+			
+			}//end function prc
+		
+			
+		var show = function(e){
+			if (e == "paper"){
+				document.getElementById("cfield").innerHTML = "<img src='http://place-hold.it/150x150/333/fff&text=P' />";
+				}
+			else if(e == "rock"){
+				document.getElementById("cfield").innerHTML = "<img src='http://place-hold.it/150x150/333/fff&text=R' />";
+				}
+			else if(e == "scissors"){
+				document.getElementById("cfield").innerHTML = "<img src='http://place-hold.it/150x150/333/fff&text=S' />";
+				}
+			}
+			
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Hw for week 2</title>
+
+</head>
+
+<body>
+<img src="http://1.bp.blogspot.com/-zXw6cUaUu5E/T7pKD1C8ViI/AAAAAAAABNw/tgaQtkuTwMs/s1600/Blog+5-21-12.jpg" id="paper"  alt="paper" width="230px"/>　<img src="http://hyesyo.files.wordpress.com/2012/03/fist.jpg" id="rock" alt="rock" width="150px">　<img src="http://pbmo.files.wordpress.com/2010/12/peace-sign.png" id="scissors" alt="scissors" width="150px">
+</div><br><br>
+
+<div id="cfield"></div>
+
+<script type="text/javascript">
+			var mx	= 3;
+			var mn	= 1;
+			var r 	= Math.round(Math.random()*(mx-mn))+mn;
+		
+		var paper		= document.getElementById("paper");
+		var rock		= document.getElementById("rock");
+		var scissors	= document.getElementById("scissors");
+		
+		var paperimg	= "<img src='http://1.bp.blogspot.com/-zXw6cUaUu5E/T7pKD1C8ViI/AAAAAAAABNw/tgaQtkuTwMs/s1600/Blog+5-21-12.jpg' width=230px;>";
+		var rockimg		="<img src='http://hyesyo.files.wordpress.com/2012/03/fist.jpg' width=150px;>";
+		var scissorsimg	="<img src='http://pbmo.files.wordpress.com/2010/12/peace-sign.png' width=150px;>";
+		
+		paper.onclick 		= function(){			
+			if(r == 1){
+				console.log("No one won.");
+				document.getElementById("cfield").innerHTML = paperimg;
+				}
+			else if( r == 2 ){
+				console.log("User lost.");
+				document.getElementById("cfield").innerHTML = scissorsimg;
+				}
+			else if (r == 3){
+				console.log("User won.");
+				document.getElementById("cfield").innerHTML = rockimg;
+				}
+			
+			}
+		
+		
+		rock.onclick		= function (){
+				
+			if(r == 1){
+				console.log("User lost.");
+				document.getElementById("cfield").innerHTML = paperimg;
+				}
+			else if( r == 2 ){
+				console.log("User won.");
+				document.getElementById("cfield").innerHTML = scissorsimg;
+				}
+			else if (r == 3){
+				console.log("No one won.");
+				document.getElementById("cfield").innerHTML = rockimg;
+				}
+			
+			}
+					
+		scissors.onclick	= function (){
+				
+			if(r == 1){
+				console.log("User won.");
+				document.getElementById("cfield").innerHTML = paperimg;
+				}
+			else if( r == 2 ){
+				console.log("No one won.");
+				document.getElementById("cfield").innerHTML = scissorsimg;
+				}
+			else if (r == 3){
+				console.log("User lost.");
+				document.getElementById("cfield").innerHTML = rockimg;
+				}
+			
+			}
+		
+			
+
+	</script>
+
+</body>
+</html>
